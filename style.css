@@ -499,6 +499,104 @@ body {
     color: #333;
 }
 
+/* 移动端响应式样式 */
+@media screen and (max-width: 768px) {
+    .resume-container {
+        max-width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header-right {
+        width: 100px;
+        height: 130px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .personal-info {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        text-align: left;
+    }
+
+    .header-title-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title-chinese {
+        margin-right: 0;
+        font-size: 24px;
+    }
+
+    .title-english {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .section-title::after {
+        width: calc(100vw - 140px);
+    }
+
+    .education-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .education-school,
+    .education-major {
+        text-align: left;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .project-name {
+        text-align: left;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .skills-list li,
+    .section-content,
+    .project-description,
+    .tech-stack,
+    .work-list {
+        font-size: 14px;
+    }
+
+    .project-item {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+}
+
 @media print {
     .resume-container {
         max-width: none;
