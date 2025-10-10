@@ -528,9 +528,10 @@ body {
     }
 
     .personal-info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 5px;
         text-align: left;
+        font-size: 13px;
     }
 
     .header-title-section {
