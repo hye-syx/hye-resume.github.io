@@ -499,165 +499,70 @@ body {
     color: #333;
 }
 
-/* 移动端响应式样式 */
+/* 移动端响应式样式 - 参考PDF打印效果 */
 @media screen and (max-width: 768px) {
     .resume-container {
         max-width: 100%;
-        padding: 15px;
+        padding: 10px;
         margin: 0 auto;
     }
 
-    .header {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-        gap: 10px;
-        justify-content: space-between;
-    }
-
-    .header-left {
-        flex: 1;
-        text-align: left;
-        min-width: 0; /* 允许收缩 */
-    }
-
+    /* 保持桌面端布局，只调整尺寸 */
     .header-right {
-        width: 70px;
-        height: 90px;
-        margin: 0;
-        flex-shrink: 0;
+        width: 80px;
+        height: 110px;
     }
 
     .name {
-        text-align: left;
-        margin-bottom: 10px;
         font-size: 20px;
+        margin-bottom: 10px;
     }
 
     .personal-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 3px 5px;
-        text-align: left;
         font-size: 11px;
-        line-height: 1.4;
-    }
-
-    .info-item {
-        justify-content: flex-start;
-        overflow: hidden;
+        gap: 5px 8px;
+        line-height: 1.5;
     }
 
     .info-label {
-        min-width: 28px;
         font-size: 11px;
-        margin-right: 2px;
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
-
-    .header-title-section {
-        text-align: center;
-        margin-bottom: 20px;
     }
 
     .title-chinese {
-        font-size: 24px;
-        margin-right: 0;
+        font-size: 22px;
     }
 
     .title-english {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .section-title {
-        font-size: 15px;
-        padding: 8px 15px;
-        display: block;
-        width: 100%;
-        text-align: left;
+        font-size: 14px;
+        padding: 6px 12px;
     }
 
     .section-title::after {
-        display: none;
+        width: calc(100vw - 100px);
     }
 
-    .education-left {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        text-align: left;
-        flex-wrap: wrap;
-    }
-
-    .education-period {
-        text-align: left;
-        font-size: 13px;
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
-
-    .education-school {
-        text-align: center;
-        font-size: 13px;
-        flex: 1;
-        min-width: 80px;
-    }
-
+    .education-period,
+    .education-school,
     .education-major {
-        text-align: right;
-        font-size: 13px;
-        flex-shrink: 0;
+        font-size: 12px;
     }
 
     .project-header {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        text-align: left;
-        flex-wrap: wrap;
+        font-size: 13px;
     }
 
-    .project-name {
-        text-align: center;
-        font-size: 14px;
-        flex: 1;
-        order: 2;
-    }
-
-    .project-period {
-        font-size: 12px;
-        order: 1;
-        flex-shrink: 0;
-    }
-
+    .project-period,
     .project-role {
-        font-size: 12px;
-        order: 3;
-        flex-shrink: 0;
+        font-size: 11px;
     }
 
-    .experience-header {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        text-align: left;
-        flex-wrap: nowrap;
-    }
-
+    .experience-period,
     .experience-title {
-        text-align: left;
-        flex: 1;
         font-size: 12px;
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .experience-period {
-        flex-shrink: 0;
-        font-size: 12px;
-        white-space: nowrap;
     }
 
     .skills-list li,
@@ -665,16 +570,17 @@ body {
     .project-description,
     .tech-stack,
     .work-list {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
     .project-item {
-        padding: 15px;
-        margin-bottom: 20px;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 
     .section {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 }
 
