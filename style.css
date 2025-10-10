@@ -503,48 +503,56 @@ body {
 @media screen and (max-width: 768px) {
     .resume-container {
         max-width: 100%;
-        padding: 10px;
-        margin: 0;
+        padding: 15px;
+        margin: 0 auto;
     }
 
     .header {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 15px;
     }
 
     .header-left {
-        flex: 1;
-        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .header-right {
-        width: 80px;
-        height: 100px;
-        margin-left: 0;
-        margin-top: 0;
-        flex-shrink: 0;
+        width: 100px;
+        height: 130px;
+        margin: 0;
+        order: -1; /* 照片显示在姓名上方 */
+    }
+
+    .name {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 22px;
     }
 
     .personal-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-        text-align: left;
-        font-size: 13px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        text-align: center;
+        font-size: 14px;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .info-item {
+        justify-content: center;
     }
 
     .header-title-section {
-        flex-direction: column;
         text-align: center;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .title-chinese {
-        margin-right: 0;
         font-size: 24px;
+        margin-right: 0;
     }
 
     .title-english {
@@ -552,39 +560,57 @@ body {
     }
 
     .section-title {
-        font-size: 14px;
-        padding: 6px 12px;
+        font-size: 15px;
+        padding: 8px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;
     }
 
     .section-title::after {
-        width: calc(100vw - 140px);
+        display: none;
     }
 
     .education-left {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
     }
 
+    .education-period,
     .education-school,
     .education-major {
-        text-align: left;
+        text-align: center;
+        font-size: 15px;
     }
 
     .project-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
     }
 
     .project-name {
-        text-align: left;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .project-period,
+    .project-role {
+        font-size: 14px;
     }
 
     .experience-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .experience-title {
+        text-align: center;
     }
 
     .skills-list li,
@@ -596,8 +622,12 @@ body {
     }
 
     .project-item {
-        padding: 12px;
-        margin-bottom: 15px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        margin-bottom: 25px;
     }
 }
 
