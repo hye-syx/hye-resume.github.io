@@ -508,41 +508,46 @@ body {
     }
 
     .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+        justify-content: space-between;
     }
 
     .header-left {
-        width: 100%;
-        text-align: center;
+        flex: 1;
+        text-align: left;
+        min-width: 0; /* 允许收缩 */
     }
 
     .header-right {
-        width: 100px;
-        height: 130px;
+        width: 70px;
+        height: 90px;
         margin: 0;
-        order: -1; /* 照片显示在姓名上方 */
+        flex-shrink: 0;
     }
 
     .name {
-        text-align: center;
-        margin-bottom: 15px;
-        font-size: 22px;
+        text-align: left;
+        margin-bottom: 10px;
+        font-size: 20px;
     }
 
     .personal-info {
         grid-template-columns: 1fr;
-        gap: 8px;
-        text-align: center;
-        font-size: 14px;
-        max-width: 280px;
-        margin: 0 auto;
+        gap: 4px;
+        text-align: left;
+        font-size: 12px;
     }
 
     .info-item {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .info-label {
+        min-width: 50px;
+        font-size: 12px;
     }
 
     .header-title-section {
@@ -572,45 +577,75 @@ body {
     }
 
     .education-left {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 8px;
-        text-align: center;
+        text-align: left;
+        flex-wrap: wrap;
     }
 
-    .education-period,
-    .education-school,
-    .education-major {
+    .education-period {
+        text-align: left;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .education-school {
         text-align: center;
-        font-size: 15px;
+        font-size: 13px;
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .education-major {
+        text-align: right;
+        font-size: 13px;
+        flex-shrink: 0;
     }
 
     .project-header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 8px;
-        text-align: center;
+        text-align: left;
+        flex-wrap: wrap;
     }
 
     .project-name {
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
+        flex: 1;
+        order: 2;
     }
 
-    .project-period,
+    .project-period {
+        font-size: 12px;
+        order: 1;
+        flex-shrink: 0;
+    }
+
     .project-role {
-        font-size: 14px;
+        font-size: 12px;
+        order: 3;
+        flex-shrink: 0;
     }
 
     .experience-header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 8px;
-        text-align: center;
+        gap: 10px;
+        text-align: left;
+        flex-wrap: wrap;
     }
 
     .experience-title {
-        text-align: center;
+        text-align: left;
+        flex: 1;
+    }
+
+    .experience-period {
+        flex-shrink: 0;
     }
 
     .skills-list li,
