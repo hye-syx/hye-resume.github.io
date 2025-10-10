@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+}
+
+.resume-container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    min-height: 297mm;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.header-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.header-title-section::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #43546a;
+}
+
+.header-title-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #43546a;
+}
+
+.title-chinese {
+    font-size: 28px;
+    font-weight: bold;
+    color: #43546a;
+    margin-right: 20px;
+}
+
+.title-english {
+    font-size: 24px;
+    font-weight: bold;
+    color: #43546a;
+    letter-spacing: 2px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-label {
+    font-weight: bold;
+    margin-right: 5px;
+    min-width: 60px;
+}
+
+.header-right {
+    width: 120px;
+    height: 160px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #666;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #666;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.photo-placeholder::before {
+    content: "👤";
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.header-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section-title {
+    background: #43546a;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    height: 3px;
+    background: #43546a;
+    width: 640px;
+}
+
+.section-title::before {
+    content: "🎓";
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.section-title.skills::before {
+    content: "🏆";
+}
+
+.section-title.awards::before {
+    content: "👍";
+}
+
+.section-title.projects::before {
+    content: "📊";
+}
+
+.section-title.experience::before {
+    content: "💼";
+}
+
+.section-title.school::before {
+    content: "🎯";
+}
+
+
+.section-content {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.education-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.education-period {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    flex: 0 0 auto;
+}
+
+.education-school {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+}
+
+.education-major {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    text-align: right;
+    flex: 0 0 auto;
+}
+
+.education-rank {
+    font-size: 15px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.course-list {
+    margin-top: 10px;
+    color: #333;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.rank-label, .course-label {
+    font-weight: bold;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.6;
+}
+
+.skills-list li::before {
+    content: "•";
+    color: #43546a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.skill-category {
+    font-weight: bold;
+    color: #333;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.project-name {
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+
+.project-period {
+    color: #666;
+    font-size: 14px;
+}
+
+.project-role {
+    color: #43546a;
+    font-size: 14px;
+}
+
+.project-description {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tech-stack {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tech-stack > div:not(:first-child) {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 6px;
+}
+
+.tech-stack > div:not(:first-child)::before {
+    content: "•";
+    color: #43546a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.tech-label {
+    font-weight: bold;
+    color: #43546a;
+}
+
+.project-label {
+    font-weight: bold;
+    color: #43546a;
+}
+
+.project-description strong {
+    font-weight: bold;
+    color: #43546a;
+}
+
+.work-list {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.work-list ol {
+    padding-left: 20px;
+}
+
+.work-list li {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: normal;
+}
+
+.work-list > div:not(:first-child) {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.work-list > div:not(:first-child)::before {
+    content: "•";
+    color: #43546a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.work-sublist {
+    margin-top: 8px;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    font-weight: normal;
+    position: relative;
+}
+
+.work-sublist div {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.work-sublist div::before {
+    content: "•";
+    color: #43546a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+.experience-item {
+    margin-bottom: 15px;
+    padding-left: 0px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+}
+
+.work-content {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.work-content-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.6;
+}
+
+.work-content-item::before {
+    content: "●";
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.experience-period {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+.experience-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+.awards-content {
+    margin-bottom: 10px;
+}
+
+.awards-section {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+}
+
+.awards-section::before {
+    content: "•";
+    color: #43546a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.awards-label {
+    font-weight: bold;
+    color: #333;
+}
+
+@media print {
+    .resume-container {
+        max-width: none;
+        margin: 0;
+        padding: 15px;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        margin: 0;
+        size: A4;
+    }
+
+    /* 隐藏页眉页脚 */
+    @page :first {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* 防止页面分割 */
+    .section {
+        page-break-inside: avoid;
+    }
+
+    /* 确保打印时不显示浏览器默认的页眉页脚 */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
