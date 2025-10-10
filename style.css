@@ -535,10 +535,11 @@ body {
     }
 
     .personal-info {
-        grid-template-columns: 1fr;
-        gap: 4px;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px 8px;
         text-align: left;
-        font-size: 12px;
+        font-size: 11px;
+        line-height: 1.4;
     }
 
     .info-item {
@@ -546,8 +547,9 @@ body {
     }
 
     .info-label {
-        min-width: 50px;
-        font-size: 12px;
+        min-width: 35px;
+        font-size: 11px;
+        margin-right: 3px;
     }
 
     .header-title-section {
