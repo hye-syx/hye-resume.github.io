@@ -536,7 +536,7 @@ body {
 
     .personal-info {
         grid-template-columns: 1fr 1fr;
-        gap: 3px 8px;
+        gap: 3px 5px;
         text-align: left;
         font-size: 11px;
         line-height: 1.4;
@@ -544,12 +544,15 @@ body {
 
     .info-item {
         justify-content: flex-start;
+        overflow: hidden;
     }
 
     .info-label {
-        min-width: 35px;
+        min-width: 28px;
         font-size: 11px;
-        margin-right: 3px;
+        margin-right: 2px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .header-title-section {
