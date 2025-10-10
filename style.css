@@ -639,18 +639,25 @@ body {
     .experience-header {
         flex-direction: row;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         text-align: left;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .experience-title {
         text-align: left;
         flex: 1;
+        font-size: 12px;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .experience-period {
         flex-shrink: 0;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
     .skills-list li,
