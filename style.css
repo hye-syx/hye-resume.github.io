@@ -567,19 +567,33 @@ body {
     }
 
     @page {
-        margin: 0;
+        margin: 12mm;
         size: A4;
     }
 
-    /* 隐藏页眉页脚 */
-    @page :first {
-        margin-top: 0;
-        margin-bottom: 0;
+    /* 打印时的间距优化 */
+    .section {
+        margin-bottom: 8px;
     }
 
-    /* 防止页面分割 */
-    .section {
-        page-break-inside: avoid;
+    .experience-item {
+        margin-bottom: 5px;
+    }
+
+    .project-item {
+        margin-bottom: 5px !important;
+        padding: 8px !important;
+        border: none !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .header {
+        margin-bottom: 8px;
+    }
+
+    .section-title {
+        margin-bottom: 5px;
     }
 
     /* 确保打印时不显示浏览器默认的页眉页脚 */
